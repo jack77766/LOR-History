@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match History</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1 class='logo'>LOR-CHIEF</h1>
+        <ul class='nav-list'>
+            <li class='nav-item'>Home</li>
+            <li class='nav-item'>Match-history</li>
+            <li class='nav-item'>About-us</li>
+        </ul>
+    </nav>
+    <% matchesInfo.forEach(match => { %>
+    <div class="match">
+        <div class="match-info">
+            <h1 class='match-type'><%= match.gameType %></h1>
+            <h4 class='match-date'><%= match.gameDate %></h4>
+        </div>
+        <div class="players">
+            <!-- <h3>VS</h3> -->
+            <div class="player">
+                <div class="player-info">
+                    <!-- <h5>Player1</h5> -->
+                    <h2 class='player-name'><%= match.p1Name %> | <%= match.p1Outcome %></h2>
+                    <h4 class='player-factions'><%= match.p1Factions[0] %> | <%= match.p1Factions[1] %></h4>
+                    <h6>DECK CODE: <%= match.p1DeckCode %></h6>
+                </div>
+                <div class="deck">
+                    <div class="units">
+                        <% for(let card of match.p1Deck) { %>
+                            <% if(card.type == 'Unit') { %>
+                            <img src=<%= '/LorTiles/'+card.code+'.png' %> alt="card_image" height="42">
+                            <i class='count<%=card.count%>'></i>    
+                            <!-- <span class ='count' > x<%= card.count %> </span> -->
+                            <br>
+                            <% } %>
+                        <% } %>
+                    </div>
+                    <div class="spells">
+                        <% for(let card of match.p1Deck) { %>
+                            <% if(card.type == 'Spell') { %>
+                            <img src=<%= '/LorTiles/'+card.code+'.png' %> alt="card_image" height="42">
+                            <!-- <span class ='count' > x<%= card.count %> </span> -->
+                            <i class='count<%=card.count%>'></i>    
+                            <br>
+                            <% } %>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-info">
+                    <!-- <h5>Player2</h5> -->
+                    <h2 class='player-name'><%= match.p2Name %>  | <%= match.p2Outcome %></h2>
+                    <h4 class='player-factions'><%= match.p2Factions[0] %> | <%= match.p2Factions[1] %></h4>
+                    <h6>DECK CODE: <%= match.p2DeckCode %></h6>
+                </div>
+                <div class="deck">
+                    <div class="units">
+                        <% for(let card of match.p2Deck) { %>
+                            <% if(card.type == 'Unit') { %>
+                            <img src=<%= '/LorTiles/'+card.code+'.png' %> alt="card_image" height="42">
+                            <!-- <span class ='count' > x<%= card.count %> </span> -->
+                            <i class='count<%=card.count%>'></i>    
+                            <br>
+                            <% } %>
+                        <% } %>
+                    </div>
+                    <div class="spells">
+                        <% for(let card of match.p2Deck) { %>
+                            <% if(card.type == 'Spell') { %>
+                            <img src=<%= '/LorTiles/'+card.code+'.png' %> alt="card_image" height="42">
+                            <!-- <span class ='count' > x<%= card.count %> </span> -->
+                            <i class='count<%=card.count%>'></i>    
+                            <br>
+                            <% } %>
+                        <% } %>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+    <hr class='match-hr'>
+    <% }); %>
+</body>
+</html>

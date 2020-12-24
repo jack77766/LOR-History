@@ -1,0 +1,9 @@
+node_modules
+core-en_us
+set1-en_us
+acc.txt
+GameMode.cs
+public/images/set1-en_us
+public/images/set2-en_us
+public/images/set3-en_us
+.env

@@ -1,0 +1,188 @@
+:root{
+    --font-headers: 'Josefin Sans', sans-serif;
+    --font-main:    'Poppins', sans-serif;
+    --color-main-teal: #306969;
+    --gradient1: linear-gradient(to right, rgba(0,0,0,0.5) 20%, rgba(48, 105, 105,0.5) 50%, rgba(0,0,0,0.5) 80%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: var(--font-main);
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: var(--font-headers);
+    font-weight: normal;
+}
+
+nav {
+    padding: 1em;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    background-image: var(--gradient1);
+}
+
+.logo {
+    font-size: 2.5em;
+    color: var(--color-main-teal);
+}
+.nav-list {
+    display: flex;
+}
+
+.nav-item {
+    font-size: 1em;
+    padding: 0em 1em;
+    color: var(--color-main-teal);
+}
+
+
+/* SEARCH-PAGE */
+
+.search-header {
+    text-align: center;
+    margin-top: 15vh;
+    color: var(--color-main-teal);
+    font-weight: medium;
+    font-size: 1.75em;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.search-button {
+    background-color: var(--color-main-teal);
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.search-field {
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-left:  5px;
+}
+
+.search-label {
+    font-size: 1.2em;
+}
+
+
+
+
+/* MATCH-HISTORY PAGE */
+
+.match-type {
+    margin-bottom: .25em;
+    font-size: 2.5em;
+}
+
+.match-info{
+    padding: 5em 0 2.5em 0;
+    text-align: center;
+}
+
+.players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.player {
+    width: 45vw;
+    border-radius: 40px;
+    background-color: rgba(0,0,0,.45);
+}
+
+.player-info{
+    text-align: center;
+    padding: 1em;
+}
+
+.player-name {
+    margin-top: .25em;
+    font-size: 2em;
+}
+
+.player-factions {
+    font-size: 1.1em;
+    margin: .25em 0 .5em 0;
+}
+
+.count {
+    font-size:  32px;
+    color:  royalblue;
+    vertical-align: top;
+    font-size: 24px;
+    border: 2px solid royalblue;
+    border-radius: 30px;
+}
+
+.deck {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.count1 {
+    background: url("/images/tile_1.png");
+    height: 42px;
+    width: 42px;
+    display: inline-block;
+}
+.count2 {
+    background: url("/images/tile_2.png");
+    height: 42px;
+    width: 42px;
+    display: inline-block;
+}
+.count3 {
+    background: url("/images/tile_3.png");
+    height: 42px;
+    width: 42px;
+    display: inline-block;
+
+}
+
+.match {
+    /* display: block; */
+    position: relative;
+    background: url(/images/bgs/1-ts.png)
+}
+
+
+
+.matcher::after {
+    content: "";
+    background: url(/images/bgs/1.png);
+    /* background: url(/images/set3-en_us/en_us/img/cards/03BW004T3-full.png); */
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+
+
+  
+
