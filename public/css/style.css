@@ -31,6 +31,17 @@ nav {
     background-image: var(--gradient1);
 }
 
+
+a, a:link, a:visited, a:focus, a:active{
+    color: var(--color-main-teal);
+    text-decoration:none; 
+    cursor: pointer;
+  }
+
+a:hover {
+    color: white;
+}
+
 .logo {
     font-size: 2.5em;
     color: var(--color-main-teal);
@@ -170,6 +181,7 @@ nav {
 .match {
     /* display: block; */
     position: relative;
+    padding-bottom: 10vh;
 }
 
 .bg1 {
@@ -204,6 +216,15 @@ nav {
 }
 .bg11 {
     background: url(/images/bgs/11-ts.png)
+}
+.bg12 {
+    background: url(/images/bgs/12-ts.png)
+}
+.bg13 {
+    background: url(/images/bgs/13-ts.png)
+}
+.bg14 {
+    background: url(/images/bgs/14-ts.png)
 }
 
 
