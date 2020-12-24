@@ -38,12 +38,18 @@ app.post('/', async (req,res)=> {
 
         const matches = await getMatches(matchIDs);
         matchesInfo = [];
+        let bgs = [];
         for(const match of matches) {
+
+            let randBg = Math.floor(Math.random() * 14) + 1;
+            bgs.push(`bg${randBg}`);
+
             const matchObject = await buildMatchObject(match);
             // console.log('MatchInfo: ', matchObject);
             matchesInfo.push(matchObject)
         }
-        res.render('history', {matchesInfo: matchesInfo});
+
+        res.render('history', {matchesInfo: matchesInfo, bgs: bgs});
     }
     catch (err) {
         console.log(err);

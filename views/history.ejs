@@ -16,8 +16,8 @@
             <li class='nav-item'>About-us</li>
         </ul>
     </nav>
-    <% matchesInfo.forEach(match => { %>
-    <div class="match">
+    <% matchesInfo.forEach((match, index) => { %>
+    <div class="match <%= bgs.pop() %>">
         <div class="match-info">
             <h1 class='match-type'><%= match.gameType %></h1>
             <h4 class='match-date'><%= match.gameDate %></h4>
